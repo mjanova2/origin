@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+    </head>
+    <body>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()"> Mans portfolio</a>
+    <a href="#Temats" class="w3-bar-item w3-button w3-padding-large w3-hide-small" onclick="myFunction()">Temats</a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small" "onclick="myFunction()">Gimp</a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small" "onclick="myFunction()">Inkscape</a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small" "onclick="myFunction()">3D modelēšanas</a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small" "onclick="myFunction()">Video rediģēšana</a><!-- comment -->
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small" "onclick="myFunction()">Word</a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small" "onclick="myFunction()">Excel</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More"> vairāk <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#" class="w3-bar-item w3-button">...</a>
+        <a href="#" class="w3-bar-item w3-button">...</a>
+        <a href="#" class="w3-bar-item w3-button">...</a>
+      </div>
+    </div>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+
+        <div>TODO write content</div> 
+        <ol> 
+            <li>kā orientēties excel</li> 
+            <li>kā lietot gimp</li>
+            <li>video apstrāde</li>
+            <li>lietot inkscape</li>
+            <li>video apstrāde</li>
+        </ol>     
+        <img src="images/zīmējums.svg" alt=""
+             width="400"
+             height="500"/>
+        <img src="images/Ekrānuzņēmums 2025-02-14 125337.png" alt=""
+             width="500"
+             height="300"/>
+
+    </body>
+</html>
