@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="lv">
+    <head>
+        <title>index</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/manistili.css">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <!-- Navbar -->
+        <div class="w3-top">
+            <div class="w3-bar w3-black w3-card">
+                <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+                <a href="index.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Mans portfolio</a>
+                <a href="otrais.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Otrais</a>
+                <a href="#Temats" class="w3-bar-item w3-button w3-padding-large w3-hide-small" onclick="myFunction()">Temats</a>
+                <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small" onclick="myFunction()">Gimp</a>
+                <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small" onclick="myFunction()">Inkscape</a>
+                <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small" onclick="myFunction()">3D modelēšana</a>
+                <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small" onclick="myFunction()">Video rediģēšana</a>
+                <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small" onclick="myFunction()">Word</a>
+                <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small" onclick="myFunction()">Excel</a>
+                
+                <div class="w3-dropdown-hover w3-hide-small">
+                    <button class="w3-padding-large w3-button" title="More">Vairāk <i class="fa fa-caret-down"></i></button>     
+                    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                        <a href="dzer.html" class="w3-bar-item w3-button">Dzer</a>
+                        <a href="dzerdaudz.html" class="w3-bar-item w3-button">Dzer daudz</a>
+                        <a href="forma.html" class="w3-bar-item w3-button">Forma</a>
+                    </div>
+                </div>
+                <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+            </div>
+        </div>
+    <div class="container mt-5">
+        <h1 class="text-center">Formas un ievadlauku piemērs</h1>
+        
+        <div class="border p-4 mt-4">
+            <form>
+                <p>Šodienas datums: <input type="text" name="datums" class="form-control" readonly></p>
+                <button type="button" class="btn btn-primary" onclick="document.getElementsByName('datums')[0].value = new Date().toISOString().split('T')[0]">DATUMS</button>
+                <button type="reset" class="btn btn-danger">RESET</button>
+            </form>
+        </div>
+        
+        <div class="border p-4 mt-4">
+            <form>
+                <div>1. skaitlis<input type="number" name="sk1" class="form-control"></div>
+                <div class="mt-2">
+                    <button type="button" class="btn btn-info" onclick="calc('x')">X</button>
+                    <button type="button" class="btn btn-success" onclick="calc('+')">+</button>
+                    <button type="button" class="btn btn-warning" onclick="calc('-')">-</button>
+                    <button type="button" class="btn btn-danger" onclick="calc('/')">/</button>
+                    <button type="button" class="btn btn-secondary" onclick="resetFields()">RESET</button>
+                </div>
+                <div class="mt-2">2. skaitlis<input type="number" name="sk2" class="form-control"></div>
+                <hr>
+                <div>Rezultāts<input name="rez" class="form-control" readonly></div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function calc(op) {
+            let sk1 = parseFloat(document.getElementsByName('sk1')[0].value);
+            let sk2 = parseFloat(document.getElementsByName('sk2')[0].value);
+            let rez;
+            
+            if (isNaN(sk1) || isNaN(sk2)) {
+                alert('Lūdzu ievadiet abus skaitļus!');
+                return;
+            }
+            
+            switch (op) {
+                case 'x': rez = sk1 * sk2; break;
+                case '+': rez = sk1 + sk2; break;
+                case '-': rez = sk1 - sk2; break;
+                case '/': 
+                    if (sk2 === 0) {
+                        alert('Dalīšana ar 0 nav atļauta!');
+                        return;
+                    }
+                    rez = sk1 / sk2; 
+                    break;
+            }
+            document.getElementsByName('rez')[0].value = rez;
+        }
+        
+        function resetFields() {
+            document.getElementsByName('sk1')[0].value = '';
+            document.getElementsByName('sk2')[0].value = '';
+            document.getElementsByName('rez')[0].value = '';
+        }
+    </script>
+</body>
+</html>
